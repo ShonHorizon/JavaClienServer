@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clientservergame.MainController">
+   <center>
+      <BorderPane>
+         <center>
+            <Pane fx:id="viewPoints" prefHeight="200.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="nickNameField" layoutX="251.0" layoutY="88.0" promptText="Enter Nickname" />
+               </children></Pane>
+         </center>
+         <bottom>
+            <Pane prefHeight="59.0" prefWidth="629.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#connect" prefHeight="58.0" prefWidth="111.0" text="Connect" />
+                  <Button layoutX="111.0"  mnemonicParsing="false" onAction="#StartGame" prefHeight="58.0" prefWidth="111.0" text="StartGame" />
+                  <Button layoutX="222.0"  mnemonicParsing="false" onAction="#PauseGame" prefHeight="58.0" prefWidth="111.0" text="Pause" />
+                  <Button fx:id="Resume" layoutX="333.0"  mnemonicParsing="false" onAction="#ResumeGame" prefHeight="58.0" prefWidth="111.0" text="Resume" />
+                  <Button layoutX="444.0"  mnemonicParsing="false" onAction="#viewAllPlayers" prefHeight="58.0" prefWidth="111.0" text="AllPlayers" />
+               </children>
+            </Pane>
+         </bottom>
+         <left>
+            <Pane onMouseClicked="#MouseEvnt" prefHeight="200.0" prefWidth="9.0" style="-fx-background-color: Red;" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </center>
+   <right>
+      <Pane fx:id="StatPane" prefHeight="259.0" prefWidth="143.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
